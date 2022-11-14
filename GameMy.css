@@ -1,0 +1,117 @@
+body{
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("Background.png");
+    overflow: hidden;
+}
+button{
+    cursor: pointer;
+}
+.MenuCanvas{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("Background.png");
+}
+.LevelCanvas{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("Background.png");
+}
+.TittleGame{
+    position: absolute;
+    top: 23px;
+    left: 583px;
+    width: 200px;
+    text-align: center;
+    font-family: fantasy;
+    animation: TittleStyle 4s infinite;
+    font-size: 40px;
+}
+@keyframes TittleStyle{
+    0% {color: blue;}
+    10% {color: skyblue;}
+    20% {color: greenyellow;}
+    30% {color: orange;}
+    50% {color: red;}
+    70% {color: orange;}
+    80% {color: greenyellow;}
+    90% {color: skyblue;}
+    100% {color: blue;}
+}
+.PlayGame{
+    top: 400px;
+    left: 608px;
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    background-color: greenyellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: 20px;
+    margin: 0%;
+    padding: 0%;
+}
+.About{
+    top: 475px;
+    left: 608px;
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    background-color: greenyellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: 20px;
+}
+.DescriptionGame{
+    top: 125px;
+    left: 183px;
+    position: absolute;
+    font-family: cursive;
+    width: 1000px;
+    color: blue;
+    font-size: 30px;
+}
+.Back{
+    top: 550px;
+    left: 608px;
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    background-color: greenyellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: 20px;
+}
+.LevelOne{
+    top: 350px;
+    left: 408px;
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    background-color: greenyellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: 20px;
+}
+.LevelTwo{
+    top: 350px;
+    left: 808px;
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    background-color: greenyellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: 20px;
+}
