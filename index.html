@@ -1,0 +1,232 @@
+<html>
+    <head>
+        <title>Game2wMy</title>
+        <link rel="stylesheet" href="GameMy.css">
+        <style>
+            input[type=range]{
+                width: 400px;
+                position: absolute;
+                top: 323px;
+                left: 583px;
+                accent-color: blue;
+                width: 200px;
+            }
+            .TittleSound{
+                top: 200px;
+                width: 400px;
+                text-align: center;
+                left: 483px;
+                position: absolute;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                letter-spacing: 4px;
+                -webkit-text-stroke-width: 0.1px;
+                -webkit-text-stroke-color: white;
+                font-size: 30px;
+                color: blue;
+                transition: box-shadow 2s;
+            }
+            .TittleSound:hover{
+                cursor: default;
+            }
+            .TheVolumeSound{
+                font-weight: bold;
+                color: blue;
+                font-family: fantasy;
+                letter-spacing: 4px;
+                -webkit-text-stroke-width: 0.5px;
+                -webkit-text-stroke-color: white;
+                position: absolute;
+                top: 253px;
+                left: 583px;
+                width: 200px;
+                text-align: center;
+            }
+            .TittleLevelGame{
+                position: absolute;
+                width: 400px;
+                top: 73px;
+                left: 483px;
+                text-align: center;
+            }
+            .AboutTittle{
+                position: absolute;
+                width: 400px;
+                top: 73px;
+                left: 483px;
+                text-align: center;
+            }
+            .DisplayLevelRunning{
+                color: white;
+                font-family: fantasy;
+                font-weight: bold;
+                letter-spacing: 4px;
+                width: 200px;
+                height: 100px;
+                position: absolute;
+                top: 23px;
+                left: 1033px;
+                text-align: center;
+                background-color: blue;
+                border-radius: 100px;
+                border: 2px solid black;
+                padding-top: 10px;
+            }
+            .DisplayScore{
+                color: black;
+                font-family: fantasy;
+                font-weight: bold;
+                letter-spacing: 4px;
+                width: 200px;
+                height: 40px;
+                position: absolute;
+                top: 73px;
+                left: 1033px;
+                text-align: center;
+                background-color: skyblue;
+                border-radius: 100px;
+                border: 2px solid white;
+                -webkit-text-stroke-width: 0.1px;
+                -webkit-text-stroke-color: white;
+            }
+            .TittleConditionGame{
+                border-radius: 10px;
+                letter-spacing: 2px;
+                padding-top: 15px;
+                position: absolute;
+                font-family: fantasy;
+                text-align: center;
+                background-color: blue;
+                width: 600px;
+                height: 400px;
+                top: 123px;
+                left: 383px;
+                animation: TiiteGameOverStyle2 2s infinite;
+            }
+                        
+            @keyframes TiiteGameOverStyle{
+                0% {color: blue;}
+                10% {color: rgb(50, 50, 255);}
+                20% {color: rgb(100, 100, 255);}
+                30% {color: rgb(150, 150, 255);}
+                50% {color: skyblue;}
+                70% {color: rgb(150, 150, 255);}
+                80% {color: rgb(100, 100, 255);}
+                90% {color: rgb(50, 50, 255);}
+                100% {color: blue;}
+            }
+            @keyframes TiiteGameOverStyle2{
+                0% {color: red;}
+                10% {color: rgb(255, 50, 50);}
+                20% {color: rgb(255, 100, 100);}
+                30% {color: rgb(255, 150, 150);}
+                50% {color: pink;}
+                70% {color: rgb(255, 150, 150);}
+                80% {color: rgb(255, 100, 100);}
+                90% {color: rgb(255, 50, 50);}
+                100% {color: red;}
+            }
+            .ScoreGame{
+                letter-spacing: 2px;
+                text-align: center;
+                width: 300px;
+                left: 533px;
+                top: 223px;
+                position: absolute;
+                font-family: fantasy;
+                color: rgb(115, 255, 0);
+                background-color: white;
+                border: 2px solid black;
+                border-radius: 30px;
+            }
+            .NextPrevBtn{
+                position: absolute;
+                font-family: fantasy;
+                border: 1px solid white;
+                background-color: rgb(0, 8, 117);
+                color: white;
+                left: 583px;
+                top: 223px;
+                width: 200px;
+                height: 80px;
+                font-size: 25px;
+                letter-spacing: 2px;
+            }
+            .RestPlayBtn{
+                position: absolute;
+                font-family: fantasy;
+                border: 1px solid white;
+                background-color: rgb(0, 8, 117);
+                color: white;
+                left: 583px;
+                top: 323px;
+                width: 200px;
+                height: 80px;
+                font-size: 25px;
+                letter-spacing: 2px;
+            }
+            .MainMenuBtn{
+                position: absolute;
+                font-family: fantasy;
+                border: 1px solid white;
+                background-color: rgb(0, 8, 117);
+                color: white;
+                left: 583px;
+                top: 423px;
+                width: 200px;
+                height: 80px;
+                font-size: 25px;
+                letter-spacing: 2px;
+            }
+            .NextPrevBtn:hover{
+                box-shadow: 0 0 50px skyblue;
+            }
+            .RestPlayBtn:hover{
+                box-shadow: 0 0 50px skyblue;
+            }
+            .MainMenuBtn:hover{
+                box-shadow: 0 0 50px skyblue;
+            }
+        </style>
+    </head>
+    <body onload="LoadPage()">
+        <canvas class="MenuCanvas" id="MenuCanvas" width="1200" height="600"></canvas>
+        <canvas class="LevelCanvas" id="LevelCanvas" width="1200" height="600"></canvas>
+        <h1 class="TittleGame" id="TittleGame">Luft Ballon</h1>
+        <h2 class="TittleSound" id="TittleSound">Volume Sound</h2>
+        <h2 class="TheVolumeSound" id="TheVolumeSound">50%</h2>
+        <input type="range" min="0" max="100" step="2" value="50" id="SoundInput">
+        
+        <h1 class="TittleLevelGame" id="TittleLevelGame">Level Game</h1>
+        <button class="PlayGame" id="PlayGame">Play Game</button>
+        <button class="LevelOne" id="LevelOne">Level 1</button>
+        <button class="LevelTwo" id="LevelTwo">Level 2</button>
+
+        <h1 class="AboutTittle" id="AboutTittle">About</h1>
+        <button class="About" id="About">About</button>
+        <p class="DescriptionGame" id="DescriptionGame">
+            Luft Ballon, taken from the German language luft meaning air and ballon meaning ballon,
+            in the sense that the luft balloon is a flying balloon. 
+            Luft Balloon is a flying Balloon Game that avoids the Birds that are coming to attack the Balloons. To survive an attack, 
+            all you have to do is dodge all the attacking Birds, 
+            in order to reach your goal.
+        </p>
+
+        <h1 class="DisplayLevelRunning" id="DisplayLevelRunning">Level 1</h1>
+        <h1 class="DisplayScore" id="DisplayScore">Score: <span class="Score" id="Score">0</span></h1>
+
+        <h1 class="TittleConditionGame" id="TittleConditionGame">Game Over!</h1>
+        <h2 class="ScoreGame" id="ScoreGame">Your Score 0</h2>
+        <button class="NextPrevBtn" id="NextPrevBtn">Next Level</button>
+        <button class="RestPlayBtn" id="RestPlayBtn">Restart</button>
+        <button class="MainMenuBtn" id="MainMenuBtn">Main Menu</button>
+        
+        <button class="Back" id="Back">Back</button>
+        <script>
+            SoundInput.oninput = function(){
+                let ValueSound = SoundInput.value
+                TheVolumeSound.innerHTML = ValueSound + "%"
+            }
+        </script>
+        <script src="GameMy.js"></script>
+    </body>
+</html>
